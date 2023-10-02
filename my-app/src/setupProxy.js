@@ -4,8 +4,17 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://127.0.0.1:5000',
+      target: 'https://thawing-savannah-53116-6c6cf43d1486.herokuapp.com/',
+      changeOrigin: true,
+    })
+  );
+
+  app.use(
+    '/',
+    createProxyMiddleware({
+      target: 'https://thawing-savannah-53116-6c6cf43d1486.herokuapp.com/',
       changeOrigin: true,
     })
   );
 };
+
