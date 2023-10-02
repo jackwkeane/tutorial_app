@@ -14,9 +14,10 @@ function App() {
     }).then(data => setState(data))
     .then(error => console.log(error))
   }, [])
-  
+
   return (
     <div className="App">
+      <h1>Hello</h1> {/* Add this line */}
       <Deploy prop={state}/>
     </div>
   );
